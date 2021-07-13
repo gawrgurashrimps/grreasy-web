@@ -3,7 +3,7 @@ USE `products`;
 
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 );
@@ -39,9 +39,10 @@ CREATE TABLE `origin` (
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO `origin` VALUES (1,'Woolworths'),
-(2,'Aldi'),
-(3,'Coles');
+INSERT INTO `origin` VALUES 
+  (1,'Woolworths'),
+  (2,'Aldi'),
+  (3,'Coles');
 
 
 DROP TABLE IF EXISTS `items`;
@@ -54,14 +55,7 @@ CREATE TABLE `items` (
   `quantity` int NOT NULL,
   `fk_unit` int NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_category_idx` (`fk_category`),
-  KEY `fk_qtyType_idx` (`fk_unit`),
-  KEY `origin_id_idx` (`origin_id`),
   CONSTRAINT `fk_category` FOREIGN KEY (`fk_category`) REFERENCES `category` (`id`),
   CONSTRAINT `fk_unit` FOREIGN KEY (`fk_unit`) REFERENCES `unit` (`id`),
   CONSTRAINT `origin_id` FOREIGN KEY (`origin_id`) REFERENCES `origin` (`id`)
 );
-
-
-
-
