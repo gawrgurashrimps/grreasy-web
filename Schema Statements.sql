@@ -48,7 +48,7 @@ INSERT INTO `origin` VALUES
 DROP TABLE IF EXISTS `items`;
 CREATE TABLE `items` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `origin_id` int NOT NULL,
   `price` decimal(19,2) NOT NULL,
   `fk_category` int NOT NULL,
