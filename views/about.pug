@@ -6,13 +6,14 @@ block content
     p.elist Enter your email to be informed of our future updates!!  
     
   
-  
+    //form(action='/signedup' method='get')
     #firstName
         input(type='text', name='firstName', placeholder='First Name')
     #lastName
         input(type='text', name='lastName', placeholder='Last Name')
     #emailField
         input(type='text', name='emailField', placeholder='Email Address')
+        
     #buttonSignup
         a(href="/signedup")
             button(type='submit') Sign up
