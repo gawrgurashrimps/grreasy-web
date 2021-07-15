@@ -5,6 +5,10 @@ const { query } = require('../utils/pool.js');
 
 
 router.get('/', function(req, res, next) {
+  if (process.env.DUMMY_DATA) {
+    res.json([{"product_id":1,"product_name":"Hass Avocado","origin_name":"Woolworths","product_price":1,"product_quantity":1,"unit_name":"each","category_name":"foods"},{"product_id":2,"product_name":"Fresh Papple","origin_name":"Woolworths","product_price":1.24,"product_quantity":1,"unit_name":"each","category_name":"foods"},{"product_id":3,"product_name":"Fresh Pink Lady Apples","origin_name":"Woolworths","product_price":0.77,"product_quantity":1,"unit_name":"each","category_name":"foods"},{"product_id":4,"product_name":"Woolworths Carrots","origin_name":"Woolworths","product_price":2,"product_quantity":1000,"unit_name":"g","category_name":"foods"},{"product_id":5,"product_name":"Pumpkin Kent Cut","origin_name":"Woolworths","product_price":2.45,"product_quantity":1,"unit_name":"each","category_name":"foods"},{"product_id":6,"product_name":"Fresh Tomato","origin_name":"Woolworths","product_price":0.54,"product_quantity":1,"unit_name":"each","category_name":"foods"},{"product_id":7,"product_name":"Fresh Broccoli","origin_name":"Woolworths","product_price":1.49,"product_quantity":1,"unit_name":"each","category_name":"foods"},{"product_id":8,"product_name":"Woolworths Onion Brown P/p","origin_name":"Woolworths","product_price":1.5,"product_quantity":1000,"unit_name":"g","category_name":"foods"}]);
+      return;
+  }
   const searchFor = req.query.name || "";
   const orderBy = req.query.orderBy || "id";
   const orderDir = req.query.orderDir || "asc";
