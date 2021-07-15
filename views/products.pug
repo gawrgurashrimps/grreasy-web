@@ -3,6 +3,12 @@ extends layout
 block content
     h1= title
     
-    ul
-        each product in products
-            li= JSON.stringify(product)
+    each product in products
+        div.card
+            div.card-body
+                h5.card-title= product.product_name
+                h6.card-subtitle.text-muted= product.origin_name
+
+            ul.list-group
+                li.list-group-item= product.category_name
+                li.list-group-item= `$${product.product_price.toFixed(2)} for ${product.product_quantity} ${product.unit_name}`
