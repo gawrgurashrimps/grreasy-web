@@ -1,5 +1,27 @@
 extends layout 
 
 block content
-    h1= title
-    
+    #redirectbutton
+        a(href="/bestlist")
+            #redirectbutton
+            button(type="button") Recommended List
+    div.list
+        h1 Your List
+        table.table 
+            tr
+                th Name 
+                th Origin 
+                th Price 
+                th Quantity 
+                th Unit 
+                th Category 
+
+        
+            //- each product in products
+            //-     tr
+            //-         td= product.product_name
+            //-         td= product.origin_name
+            //-         td= product.product_price.toFixed(2)
+            //-         td= product.product_quantity
+            //-         td= product.unit_name
+            //-         td= product.category_name

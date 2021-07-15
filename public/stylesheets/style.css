@@ -182,3 +182,33 @@ div.products h1{
   font-size: 36px;
   line-height: 54px;
 }
+
+div.list{
+  position: absolute;
+  width: 1170px;
+  height: 618px;
+  left: 4.31%;
+  top: 18%;
+}
+
+div.list h1{
+  color: #6E41E2;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+#redirectbutton button {
+  position: absolute;
+  left: 84%;
+  top: 9.08%;
+  bottom: 85.06%;
+  width: 200px;
+  height: 60px; 
+  border-radius: 10px;
+  background: #6E41E2;
+  color: white; 
+}
