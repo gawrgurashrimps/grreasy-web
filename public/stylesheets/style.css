@@ -113,6 +113,107 @@ p.company{
   line-height: 24px;
 }
 
+/* About Page*/
+
+#firstName{
+  position: absolute;
+  left: 61%;
+  right: 27.57%;
+  top: 35%;
+  bottom: 47.27%;
+}
+
+#firstName input[type=text]{
+  padding: 10px;
+  height: 56px;
+  width: 200px;
+}
+
+
+#lastName{
+  position: absolute;
+  left: 71.38%;
+  right: 0;
+  top: 35%;
+  bottom: 47.27%; 
+
+}
+
+#lastName input[type=text]{
+  padding: 10px;
+  height: 56px;
+  width: 200px;
+}
+
+#emailField{
+  position: absolute;
+  left: 61%;
+  right: 27.57%;
+  top: 40.70%;
+  bottom: 47.27%; 
+}
+
+#emailField input[type=text]{
+  padding: 10px;
+  height: 56px;
+  width: 400px;
+}
+
+
+
+#buttonSignup{
+  position: absolute;
+  left: 65%;
+  right: 27.57%;
+  top: 50%;
+  bottom: 47.27%;
+}
+#buttonSignup button{
+  width:221px;
+  height: 56px;
+  background: #6E41E2;
+  border-radius: 10px;
+  color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+
+p.elistTitle{
+  font-size: 50px;
+  position: absolute;
+  left: 66%;
+  top:18%;
+
+}
+
+p.elist{
+  font-size: 25px;
+  font-style: italic;
+  position: absolute;
+  left: 57%;
+  top:27%;
+}
+
+
+div#yes{
+  position: absolute;
+  text-align: center;
+  left:35%;
+  top:30%;
+  font-style: italic;
+}
+p.thanks{
+  font-size: 40px;
+  left:35%
+}
+p.inform{
+  font-size: 30px;
+  left:40%;
+}
 /* Products page */
 
 #search-products{
