@@ -4,7 +4,8 @@ block content
   div#title
     h1.frontpage= title
   p.slogan Create a personalised list depending on your budget/ Grocery Shopping Made Easy! / Budgeting Made Easy/ 
-   #search
-    input(type='text', placeholder='Search a product')
-  #button
-    button(type='button' href='/products') Products
+  form(action='/products' method='get')
+    #search
+      input(type='text', name='name', placeholder='Search a product')
+    #button
+      button(type='submit') Search
