@@ -18,4 +18,11 @@ router.get('/about', function(req, res){
   });
 });
 
+router.get('/bestlist', function(req, res){
+  res.render('bestlist', {
+    title: 'BestList'
+  });
+});
+
+
 module.exports = router;
