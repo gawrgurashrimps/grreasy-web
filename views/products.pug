@@ -1,14 +1,37 @@
 extends layout 
 
 block content
-    h1= title
-    
-    each product in products
-        div.card
-            div.card-body
-                h5.card-title= product.product_name
-                h6.card-subtitle.text-muted= product.origin_name
+    #search-products
+        input(type='text', placeholder='Search a product')
 
-            ul.list-group
-                li.list-group-item= product.category_name
-                li.list-group-item= `$${product.product_price.toFixed(2)} for ${product.product_quantity} ${product.unit_name}`
+    select#dropdown-market
+        option(value="" disabled selected hidden) Supermarket
+        option All 
+        option Aldi
+        option Coles
+        option Woolworths
+
+    select#dropdown-budget
+        option(value="" disabled selected hidden) Budget 
+        option something
+
+    input#add-list(type='button', value='Add your own list')
+        
+    div.products
+        h1= title
+        table.table 
+            tr
+                th Name 
+                th Origin 
+                th Price 
+                th Quantity 
+                th Unit 
+                th Category 
+            each product in products 
+                tr
+                    td= product.product_name
+                    td= product.origin_name
+                    td= product.product_price.toFixed(2)
+                    td= product.product_quantity
+                    td= product.unit_name
+                    td= product.category_name
