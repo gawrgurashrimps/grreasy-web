@@ -6,12 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Grreasy' });
 });
 
-router.get('/products', function(req, res){
-  res.render('products', {
-    title: 'Products'
-  });
-});
-
 router.get('/list', function(req, res){
   res.render('list', {
     title: 'List'
