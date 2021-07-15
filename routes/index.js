@@ -12,4 +12,16 @@ router.get('/products', function(req, res){
   });
 });
 
+router.get('/list', function(req, res){
+  res.render('list', {
+    title: 'List'
+  });
+});
+
+router.get('/about', function(req, res){
+  res.render('about', {
+    title: 'About'
+  });
+});
+
 module.exports = router;
