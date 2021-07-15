@@ -27,7 +27,8 @@ router.get('/bestlist', function(req, res){
 
 router.get('/signedup', function(req, res){
   res.render('signedup', {
-    title: 'Successful'
+    title: 'Successful',
+    emailfield: 'email@gmail.com'
   });
 });
 
