@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div#title
+    h1.frontpage= title
+  p.slogan Create a personalised list depending on your budget/ Grocery Shopping Made Easy! / Budgeting Made Easy/ 
+   #search
+    input(type='text', placeholder='Search a product')
+  #button
+    button(type='button' href='/products') Products
