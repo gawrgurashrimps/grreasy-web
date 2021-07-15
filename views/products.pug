@@ -1,5 +1,38 @@
 extends layout 
 
 block content
-    h1= title
+    #search-products
+        input(type='text', placeholder='Search a product')
+
+    select#dropdown-market
+        option(value="" disabled selected hidden) Supermarket
+        option All 
+        option Aldi
+        option Coles
+        option Woolworths
+
+    select#dropdown-budget
+        option(value="" disabled selected hidden) Budget 
+        option something
+
+    input#add-list(type='button', value='Add your own list')
+        
+    div.products
+        h1= title
+        table.table 
+            tr
+                th Name 
+                th Origin 
+                th Price 
+                th Quantity 
+                th Unit 
+                th Category 
+            tr
+                td something
+                td something
+                td something
+                td something
+                td something
+                td something
+
     
